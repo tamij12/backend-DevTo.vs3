@@ -1,0 +1,239 @@
+
+@mixin boton {
+    background-color: transparent;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+@mixin boton_hover {
+    background-color: #d1c3f3;
+    color: #614a9e; /* Cambiar el color al hacer hover */
+}
+
+@mixin background_color {
+    background-color: #f3f0fc;
+}
+
+.body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f3f0fc;
+    width: 100%;
+}
+
+/* Estilos para el encabezado */
+.custom-header {
+    background-color: rgba(245,245,245,255);
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.header-text {
+    font-size: 18px;
+    color: black;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+}
+
+.flat-button {
+    background-color: transparent;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.flat-button:hover {
+    background-color: #d1c3f3;
+    color: #614a9e; /* Cambiar el color al hacer hover */
+}
+
+.close-button {
+    background-color: transparent;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px 10px;
+    margin-left: 10px;
+}
+
+.close-button:hover {
+    background-color: #d1c3f3;
+    border-radius: 6px;
+    color: red; /* Cambiar el color al hacer hover */
+}
+
+.post_container {
+    background-color: white;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    height: 100%;
+}
+
+.cover {
+    border-radius: 6px;
+    width: 200px;
+    text-align: center;
+    border-style: solid;
+}
+
+.tittle_post {
+    margin-top: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #8a57ff;
+    font-size: 60px;
+    border: none;
+}
+
+.tittle_post:focus {
+    outline: none;
+    color: black;
+}
+
+.tags_input {
+    margin-top: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    border: none;
+}
+
+.tags_input:focus {
+    outline: none;
+}
+
+.styles_post_container {
+    width: 100%;
+    background-color: #f3f0fc;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin-top: 15px;
+}
+
+.styles_buttons {
+    @include boton();
+    margin: 8px;
+}
+
+.styles_buttons:hover {
+    @include boton_hover()
+}
+
+.post_content {
+    font-family: 'IBM Plex Mono', monospace;
+    border: none;
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+.post_content:focus {
+    outline: none;
+}
+
+.aside_left {
+    display: flex;
+    width: 70px;
+    @include background_color();
+}
+
+.body_container {
+    display: flex;
+    
+}
+
+.rigaside {
+    width: 70px;
+    @include background_color();
+
+}
+
+.layout {
+    width: 100%;
+    height: 100%;
+    @include background_color();
+    display: grid;
+    grid:
+      "header header header" auto
+      "leftSide body rightSide" 50%
+      "footer footer footer" auto
+      / auto 1fr 450px;
+    gap: 8px;
+  }
+  
+  .header {  width: 69%; grid-area: header; }
+  .leftSide { grid-area: leftSide; @include background_color();}
+  .body { grid-area: body;}
+  .rightSide {  width: 315px; grid-area: rightSide; @include background_color()}
+  .footer {  width: 80%; grid-area: footer; }
+
+  .footer_buttons_container {
+    display: flex;
+    padding-left: 70px;
+}
+
+//70+50 de padding
+
+.footer_buttons {
+    @include boton();
+    margin: 10px;
+    
+}
+
+.footer_buttons:hover {
+    @include boton_hover()
+}
+
+#post_area {
+    resize: none;
+    height: 160px
+}
+
+.Publish {
+    background-color: #8a57ff;
+}
+
+.tittle_info_tool {
+    
+    animation:blur-in-expand 0.4s linear both} @keyframes blur-in-expand{0%{transform:scale(0);filter:blur(12px);opacity:0}100%{transform:scale(1);filter:blur(0);opacity:1}
+    
+}
+
+.tittle_mt {margin-top: 90px;}
+.tags_mt {margin-top: 190px;}
+
+.tags_card_div:hover {@include boton_hover()}

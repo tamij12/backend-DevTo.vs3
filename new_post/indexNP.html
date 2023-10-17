@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Post</title>
+    <link rel="stylesheet" href="/new_post/stylesNP.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,500;0,700;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body class="">
+    <div class="layout">
+        <div class="header">    
+        <header class="custom-header">
+            <div class="header-left">
+                <img src="/CSSNinjas_Challenge_Dev/Post/New_button/Media/logo_DEV.png" alt="Logo" class="logo">
+                <span class="header-text">Create Post</span>
+            </div>
+            <div class="header-right">
+                <div class="button-container">
+                    <button class="flat-button">Edit</button>
+                    <button class="flat-button">Preview</button>
+                </div>
+                <button class="close-button">X</button>
+            </div>
+        </header>
+        </div>
+        <aside class="leftSide">
+            <div class="aside_left"></div>
+        </aside>
+        <main class="body">
+            <div class="main_container">
+                <div class="post_container">
+                    <input class="cover" type="url" placeholder="Add a cover image">
+                    <input  id="tittle_post" class="tittle_post" type="text" placeholder="New Post Tittle Here...">
+                    <input   id="tags_input" class="tags_input" type="text" placeholder="Add up to 4 tags...">
+                    <div id="card_container"></div>
+                    <div class="styles_post_container">
+                        <span class="tt" data-bs-placement="botton" title="Bold">
+                            <button class="styles_buttons"><img src="/new_post/Media/bold_235462.png" alt="" style="height: 25px; width: 25px;"></button>
+                        </span>
+                        <span class="tt" data-bs-placement="botton" title="Italic">
+                            <button class="styles_buttons"><img src="/Media/italic_icon-icons.com_70938.png" alt="" style="height: 25px; width: 25px;"></button>
+                        </span>
+                        <span class="tt" data-bs-placement="botton" title="Link">
+                            <button class="styles_buttons"><img src="/CSSNinjas_Challenge_Dev/Post/New_button/Media/link_icon_142996.png" alt="" style="height: 25px; width: 25px;"></button>
+                        </span>
+                        <span class="tt" data-bs-placement="botton" title="Ordered list">
+                            <button class="styles_buttons"><img src="/CSSNinjas_Challenge_Dev/Post/New_button/Media/list_ordered_icon_207046.png" alt="" style="height: 25px; width: 25px;"></button>
+                        </span>
+                        <span class="tt" data-bs-placement="botton" title="Unordered list">
+                            <button class="styles_buttons"><img src="/CSSNinjas_Challenge_Dev/Post/New_button/Media/list_icon_144238.png" alt="" style="height: 25px; width: 25px;"></button>
+                        </span>
+                        <span class="tt" data-bs-placement="botton" title="Heading">
+                            <button class="styles_buttons"><img src="/CSSNinjas_Challenge_Dev/Post/New_button/Media/text_heading_icon_194858.png" alt="" style="height: 25px; width: 25px;"></button>
+                        </span>
+                        <span class="tt" data-bs-placement="botton" title="Quote">
+                            <button class="styles_buttons"><img src="/CSSNinjas_Challenge_Dev/Post/New_button/Media/quote_left_icon_177215.png" alt="" style="height: 25px; width: 25px;"></button>
+                        </span>
+                        <span class="tt" data-bs-placement="botton" title="Code">
+                            <button class="styles_buttons"><img src="/CSSNinjas_Challenge_Dev/Post/New_button/Media/code_icon-icons.com_73620.png" alt="" style="height: 25px; width: 25px;"></button>
+                        </span>
+                        <span class="tt" data-bs-placement="botton" title="Code block">    
+                            <button class="styles_buttons"><img src="/CSSNinjas_Challenge_Dev/Post/New_button/Media/window_code_block_icon_153322.png" alt="" style="height: 25px; width: 25px;"</button>
+                        </span>
+                        <span class="tt" data-bs-placement="botton" title="Embed">    
+                            <button class="styles_buttons"><img src="/CSSNinjas_Challenge_Dev/Post/New_button/Media/lightningflash_102700.png" alt="" style="height: 25px; width: 25px;"></button>
+                        </span>
+                        <span class="tt" data-bs-placement="botton" title="Upload image">
+                            <button class="styles_buttons"><img src="/CSSNinjas_Challenge_Dev/Post/New_button/Media/frame_gallery_image_images_photo_picture_pictures_icon_123209.png" alt="" style="height: 25px; width: 25px;"></button>
+                        </span>
+                    </div>
+                    <textarea name="" id="post_area" cols="30" rows="10" class="post_content" placeholder="Write your post content here..."></textarea>
+                </div>
+            </div>
+        </main>
+        <aside class="rightSide">
+            <div  id="aside_rigth" class="aside_rigth">
+                
+
+            </div>
+        </aside>
+        <footer class="footer">
+            <div class="footer_buttons_container">
+                <button class="footer_buttons Publish">Publish</button>
+                <button class="footer_buttons">Save draft</button>
+                <button class="footer_buttons">Post opcions</button>
+                <button class="footer_buttons">Revert new changes</button>
+            </div>
+        </footer>
+    </div>
+    <script src="/new_post/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('.tt') 
+        tooltipTriggerList.forEach(t => {
+            new bootstrap.tooltipTriggerList(t) 
+        })
+    </script>
+    
+</body>
+</html>
