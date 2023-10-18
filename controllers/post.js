@@ -25,9 +25,9 @@ module.exports = {
     let updatedPost = await Post.findByIdAndUpdate({ _id: id }, newData, {new: true});
     res.status(201).send({ msg: "updated post succes", data: updatedPost});
   },
-  deletePost: async (req, res) => {
-    let id= req.params.id;
-    let deletedPost = await Post.findByIdAndDelete({_id: id});
-    res.status(200).send({msg: "deleted post"}, deletedPost)
-  }
+  // deletePost: async (req, res) => {
+  //   let id= req.params.id;
+  //   let deletedPost = await Post.findByIdAndDelete({_id: id});
+  //   res.status(200).send({msg: "deleted post"}, deletedPost)
+  // }
 };
