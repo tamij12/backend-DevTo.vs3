@@ -8,7 +8,7 @@
 module.exports = {
     get: async (req, res) => {
         let users = await Users.find()
-        res.status(200).send({ msg: "success", data: users })
+        res.status(200).send({ msg: "success, Welcome to My Backend", data: users })
     },
     getById: async (req, res) => {
         let id = req.params.id

@@ -22,18 +22,11 @@ module.exports = {
             next()
         })
     },
-    isAdmin: (req, res, next) => {
-        if (req.user.role == 'Admin') {
-            next()
-        } else {
-            return res.status(401).send({msg: 'only admin can create users'})
-        }
-    },
-    isSeller: (req, res, next) => {
-        if (req.user.role == 'Admin' || req.user.role == 'Seller') {
-            next()
-        } else {
-            return res.status(401).send({msg: 'only admin can create users'})
-        }
-    }
+    // isAdmin: (req, res, next) => {
+    //     if (req.user.role == 'Admin') {
+    //         next()
+    //     } else {
+    //         return res.status(401).send({msg: 'only admin can create users'})
+    //     }
+    // },
 }

@@ -14,6 +14,10 @@ module.exports = {
       next(error, req, res);
     }
   },
+  getAllPosts: async (req, res) => {
+    let posts = await Post.find()
+    res.status(200).send({ msg: "success", data: posts })
+},
   getPostById: async (req, res) => {
     let id = req.params.id;
     let post = await Post.findOne({ _id: id });
